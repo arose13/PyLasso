@@ -47,6 +47,19 @@ class PyLassoRegression(BaseEstimator, RegressorMixin):
     :param metric: metric to judge the best model. Must be a SMALLER IS BETTER metric.
     """
     def __init__(self, w=None, lam=None, eps=1e-3, n_lam=30, cv=5, n_jobs=-1, metric=mean_squared_error):
+        """
+        The objective function that is solved is...
+        J(m) = 1/(2*n) sum((y_i - x_i m)^2) + lam * sum(|w_j * m_j|)
+        or
+        J(m) = 1/(2*n) ||y - Xm||^2_2 + lam||w.m||_1
+
+        :param w: the multiplier for each parameter where 0 is not regularized and 1 is lam
+        :param lam: If this is set then this is the only lambda solved for.
+        :param eps: the factor lambda_min is smaller than lambda_max
+        :param n_lam: number of lambdas in the lambda path
+        :param n_jobs:
+        :param metric: metric to judge the best model. Must be a SMALLER IS BETTER metric.
+        """
         self.eps = eps
         self.lam = lam
         self.w = w
