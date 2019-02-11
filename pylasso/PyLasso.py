@@ -3,7 +3,7 @@ import numpy.linalg as la
 from sklearn.base import RegressorMixin, BaseEstimator
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import mean_squared_error, make_scorer
-from lightning.regression import FistaRegression
+from lightning.regression import FistaRegressor
 
 
 def _get_lam_max_min(x, y, eps):
