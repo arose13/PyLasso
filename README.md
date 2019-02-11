@@ -1,4 +1,4 @@
-pylasso
+PyLasso
 ===============================
 
 Author: Stephen Anthony Rose
