@@ -126,7 +126,6 @@ class PyLassoRegression(BaseEstimator, RegressorMixin):
         graph.xscale('log')
         graph.ylabel(r'$\beta$')
         graph.xlabel(r'$\lambda$')
-        graph.show()
 
     def plot_score_path(self, figsize=(10, 5)):
         import matplotlib.pyplot as graph
@@ -136,4 +135,3 @@ class PyLassoRegression(BaseEstimator, RegressorMixin):
         graph.xscale('log')
         graph.ylabel('Metric')
         graph.xlabel(r'$\lambda$')
-        graph.show()
