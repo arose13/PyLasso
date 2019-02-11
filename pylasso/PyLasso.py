@@ -90,7 +90,7 @@ class PyLassoRegression(BaseEstimator, RegressorMixin):
         for lam_i in self.lambda_path_:
             # Setup model
             per_model_n = len(y) * ((self.cv-1) / self.cv)
-            model_i = FistaRegression(
+            model_i = FistaRegressor(
                 C=1/per_model_n,
                 penalty=_LassoProjection(self.w),
                 alpha=lam_i
