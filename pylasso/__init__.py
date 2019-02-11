@@ -1,1 +1,1 @@
-from .PyLasso import PyLasso
+from .PyLasso import PyLassoRegression
