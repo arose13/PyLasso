@@ -1,1 +1,1 @@
-sklearn-contrib-lightning
+sklearn-contrib-lightning>=0.4.0
